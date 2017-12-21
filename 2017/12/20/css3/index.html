@@ -4,24 +4,21 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Common commands | Hexo</title>
+    <title>css3 | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Zhangxiaotong">
     
 
     
-    <meta name="description" content="hexo new “postName”新建文章hexo new page “pageName”新建页面hexo generate 生成静态页面至public目录hexo server 开启预览访问端口（默认端口4000，’ctrl+c’关闭server）hexo deploy 将.deploy目录部署到GitHubhe">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Common commands">
-<meta property="og:url" content="http://yoursite.com/2017/11/27/Common-commands/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="css3">
+<meta property="og:url" content="http://yoursite.com/2017/12/20/css3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="hexo new “postName”新建文章hexo new page “pageName”新建页面hexo generate 生成静态页面至public目录hexo server 开启预览访问端口（默认端口4000，’ctrl+c’关闭server）hexo deploy 将.deploy目录部署到GitHubhexo help 查看帮助hexo version 查看Hexo的版本">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-27T14:37:55.776Z">
+<meta property="og:updated_time" content="2017-12-20T11:54:34.391Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Common commands">
-<meta name="twitter:description" content="hexo new “postName”新建文章hexo new page “pageName”新建页面hexo generate 生成静态页面至public目录hexo server 开启预览访问端口（默认端口4000，’ctrl+c’关闭server）hexo deploy 将.deploy目录部署到GitHubhexo help 查看帮助hexo version 查看Hexo的版本">
+<meta name="twitter:title" content="css3">
 
     
     <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml">
@@ -75,20 +72,20 @@
 </div>
     </header>
     <div id="container">
-      <div id="main" class="w" itemscope itemprop="blogPost">
+      <div id="main" class="post" itemscope itemprop="blogPost">
   
 	<article itemprop="articleBody"> 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/11/27/Common-commands/" title="Common commands" itemprop="url">Common commands</a>
+      <a href="/2017/12/20/css3/" title="css3" itemprop="url">css3</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Zhangxiaotong" target="_blank" itemprop="author">Zhangxiaotong</a>
 		
   <p class="article-time">
-    <time datetime="2017-11-27T14:28:22.000Z" itemprop="datePublished"> 发表于 2017-11-27</time>
+    <time datetime="2017-12-20T11:54:34.000Z" itemprop="datePublished"> 发表于 2017-12-20</time>
     
   </p>
 </header>
@@ -101,8 +98,7 @@
 		
 		</div>
 		
-		<p>hexo new “postName”新建文章<br>hexo new page “pageName”新建页面<br>hexo generate 生成静态页面至public目录<br>hexo server 开启预览访问端口（默认端口4000，’ctrl+c’关闭server）<br>hexo deploy 将.deploy目录部署到GitHub<br>hexo help 查看帮助<br>hexo version 查看Hexo的版本</p>
-  
+		  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -119,17 +115,10 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/12/20/css3/" title="css3">
-  <span>
-  css3</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2017/11/22/my-new-post/"  title="my new post!">
- <span>my new post!
+<a href="/2017/11/27/Common-commands/"  title="Common commands">
+ <span>Common commands
 </span>
 </a>
 </div>
@@ -267,6 +256,55 @@ $(document).ready(function(){
 </script>
 
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
 
 
 
@@ -326,4 +364,4 @@ $(document).ready(function(){
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
